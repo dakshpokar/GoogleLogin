@@ -25,10 +25,13 @@ h5
 	padding-top: 15px;
 	padding-bottom: 3px;
 	width: 100%;
-	outline:none;
 	margin-bottom: 10px;
 	text-decoration: none;
 	border: none;
+	outline: none;
+	z-index: 1000;
+	position: relative;
+	background: transparent;
 	border-bottom: 1px solid #efefef;
 }
 #label
@@ -43,6 +46,7 @@ h5
 	 top:15px;
 	  height: 100%;
 }
+
 #textbox:focus + #label
 {
 	-webkit-transition: All 0.1s ease-in;
@@ -78,8 +82,9 @@ h5
 }
 </style>
 <script type="text/javascript">
-$('#label').click(function() {
-    $('#label').addClass('yoman');
+$(function () {
+    $("#label").click(function () {
+        $("#label").toggleClass("yoman");
 	});
 </script>
 <body style="background: #efefef">
